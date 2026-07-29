@@ -1,4 +1,4 @@
- public class Student{
+public class Student{
    private String fullName;
    private int age;
    private String institutionalEmail;
@@ -9,5 +9,21 @@
       this.age = age;
       this.institutionalEmail = institutionalEmail;
       this.currentSemester = currentSemester;
+   }
+
+   public String getFullName() {
+      return fullName;
+   }
+
+   public int getAge() {
+      return age;
+   }
+
+   public String getInstitutionalEmail() {
+      return institutionalEmail;
+   }
+
+   public int getCurrentSemester() {
+      return currentSemester;
    }
  }
