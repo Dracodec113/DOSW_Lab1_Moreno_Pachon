@@ -35,12 +35,14 @@ public class ParallelRace {
         Integer maxValue = max.apply(nums);
         return maxValue;
     }
+    
+
 
     public List<Integer> findAllValues(List<Integer> nums){
         return List.of(smallestNum(nums), totalNums(nums), findMaxValue(nums));
     }
 
-    private boolean isItMultiple(Integer num){
+        private boolean isItMultiple(Integer num){
         return num % 2 == 0 ? true : false;
     }
 }
