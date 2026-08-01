@@ -3,10 +3,16 @@ import java.util.function.Function;
 
 public class ParallelRace {
     public static void main(String[] args) {
-        List<Integer> nums = List.of(1, 2, 3, 4, 5);
+        List<Integer> nums = List.of(0, 1, 2, 3, 4, 5, 6);
         ParallelRace race = new ParallelRace();
-        System.out.println("All values: " + race.findAllValues(nums));
+        List<Integer> allValues = race.findAllValues(nums);
+        System.out.println("All values: (Smallest, Total, Biggest)" + allValues);
+        Integer biggestNum = race.findMaxValue(nums);
+        System.out.println("Is "+ biggestNum +" a multiple of 2: " + race.isItMultiple(biggestNum));
     }
+
+
+
     public Integer smallestNum(List<Integer> numbers){
         Integer small = numbers.stream()
         .min(Integer::compare)
@@ -32,6 +38,10 @@ public class ParallelRace {
 
     public List<Integer> findAllValues(List<Integer> nums){
         return List.of(smallestNum(nums), totalNums(nums), findMaxValue(nums));
+    }
+
+    private boolean isItMultiple(Integer num){
+        return num % 2 == 0 ? true : false;
     }
 }
 
