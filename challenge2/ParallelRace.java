@@ -8,7 +8,8 @@ public class ParallelRace {
         List<Integer> allValues = race.findAllValues(nums);
         System.out.println("All values: (Smallest, Total, Biggest)" + allValues);
         Integer biggestNum = race.findMaxValue(nums);
-        System.out.println("Is "+ biggestNum +" a multiple of 2: " + race.isItMultiple(biggestNum));
+        System.out.println("Is "+ biggestNum +" a multiple of 2: " + race.isItEven(biggestNum));
+        System.out.println("Is the list size even? " + race.isItEven(nums.size()));
     }
 
 
@@ -42,12 +43,7 @@ public class ParallelRace {
         return List.of(smallestNum(nums), totalNums(nums), findMaxValue(nums));
     }
 
-        private boolean isItMultiple(Integer num){
+    private boolean isItEven(Integer num){
         return num % 2 == 0 ? true : false;
     }
 }
-
-
-
-
-
