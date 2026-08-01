@@ -9,6 +9,7 @@ public class Challenge3{
         String text = "Hello world!";
         System.out.println("The reverse of Hello world! is: " + c3.reverseText(text));
         System.out.println(c3.repeatString(text, 3));
+        System.out.println(c3.repeatReverseString(text));
     }
 
     public StringBuffer reverseText(String text){
@@ -22,5 +23,10 @@ public class Challenge3{
             result.append(" " + str);
         }
         return result.toString();
+    }
+
+    public String repeatReverseString(String str){
+        String repeated =repeatString(str, 3);
+        return reverseText(repeated).toString();
     }
 }
