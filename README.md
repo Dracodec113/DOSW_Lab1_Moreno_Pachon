@@ -256,9 +256,31 @@ Briefly explain:
 
 7. What is the difference between HashMap and Hashtable?
    
+   Hashmap allows null keys and null values. It's not synchronized.
+   Hashtable is a legacy class that doesn't allow null keys nor values. It's synchronized.
+
 8. What advantages does Collectors.toMap() provide over a traditional loop?
+
+   It allows us to make multiple moves at once. Instead of needing to create an empty map and populate it through a loop, we can directly use a stream to create our map. This also synergises well with other stream methods such as filter.
+
 9. When using stream().map() on a list of objects, what type of operation is being performed?
+
+   It applies a function to each element of the stream and produces a new stream of transformed elements, without modifying the original list.
+
 10. What does stream().filter() do, and what does it return?
+
+   filter() compares values against a condition, then the values that pass the condition are returned in the form of a stream.
+
 11. Describe the steps required to create a new feature branch from develop.
+
+   First we need to have our develop branch so we create it `git checkout -b develop`.
+   Then while having that branch active we create our new feature branch using the same command `git checkout -b feature/...`.
+   Finally to upload it to the remote repository we use `git push -u origin feature/...`.
+
 12. What is the difference between git branch and git checkout -b?
+
+   `git branch` can create a branch, but it doesn't directly moves you to that branch, while `git checkout` does move you to the newly created branch.
+
 13. Why should new functionality be developed in feature/* branches instead of directly in main?
+
+   Because while working with multiple team members we can run into repeated conflicts. Having multiple feature branches allows cooperative work with multiple people and easier conflict resolution. Apart from that, the `main` branch usually represents the stable version of our project, thus having untested code on this branch is a bad practice.
