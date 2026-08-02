@@ -199,3 +199,34 @@ Briefly explain:
 
 
 ## Part 3 — Conceptual Questionnaire
+
+1. Team agreements: Add the agreements you defined in the Onboarding section here.
+
+2. What is the difference between git merge and git rebase?
+
+   A merge basically "combines" the histories of both branches through commits, while a rebase rewrites the history of the other branch replaying the commits on top of the branch.
+
+3. What happens when two branches modify the same line of a file?
+
+   Nothing happens unless we merge them onto a common branch. When those two are merged onto a common branch a conflict emerges and one must resolve it.
+
+4. How can you display the branch and merge history graphically in the terminal?
+
+   Using the command `git log --oneline --graph --decorate --all`
+
+5. What is the difference between a commit and a push?
+
+   A commit is a change made on your local machine yet to be uploaded to the remote repo, once we push that commit it gets uploaded to the remote repo.
+
+6. What are git stash and git stash pop used for?
+
+   git stash is used to save yet to be commited changes so you can work on other stuff. Once you want to work on those stashed changes you would use stash pop to take them off the stash and restart working on them.
+
+7. What is the difference between HashMap and Hashtable?
+   
+8. What advantages does Collectors.toMap() provide over a traditional loop?
+9. When using stream().map() on a list of objects, what type of operation is being performed?
+10. What does stream().filter() do, and what does it return?
+11. Describe the steps required to create a new feature branch from develop.
+12. What is the difference between git branch and git checkout -b?
+13. Why should new functionality be developed in feature/* branches instead of directly in main?
