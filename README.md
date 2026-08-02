@@ -8,7 +8,7 @@
 
 ### 1. GitHub Account
 
-We created our GitHub acounts. Next you will find the emails linked with our profiles:
+We created our GitHub accounts. Next you will find the emails linked with our profiles:
 
     - jeronimo.moreno-h@mail.escuelaing.edu.co
     - dv.pachonpinzon@gmail.com
@@ -74,7 +74,7 @@ Above we show how each of us  created our own branch
 
 ### 8. Initial Project Structure
 
-Now we will show the project structure acoording to the laboratory requirements
+Now we will show the project structure according to the laboratory requirements
 
 ![repository created](images/structure.webp)
 
@@ -118,17 +118,45 @@ In this exercise we didn't have conflicts.
 #### Evidence
 
 ![Parallel Commit Race evidence](images/challenge2.png)
+![Parallel Commit Race evidence](images/challenge2-2.png)
 
 #### Description
 
 Briefly explain:
 
-- What was implemented.
-- How the work was divided.
-- Which Git operations were used.
-- Which conflicts appeared.
-- How the conflicts were resolved.
+- What was implemented.   
+We implemented the principal class `ParcellRace` and a class named `Result` with a unique function that receives two lists of Integers and returns a list that includes (for each list) the maximum value, the minimum value, the number of elements in the list, whether the maximum is a multiple or divisor of 2 and whether the list size is even or odd.
 
+- How the work was divided.  
+Jeronimo worked with *lane one* while Derly worked with *lane two*. Each of us developed the mandatory challenges according to the laboratory instructions.  
+Like both of us wanted to learn how to solve the conflicts, Jeronimo solved the first collision and Derly the third one, because we have troubles while working in the second collision because we missed saving the file while coding and the we worked on the principal branch of the challenge.
+
+- Which Git operations were used.  
+    - git add .
+    - git push -u <branch name>
+    - git merge
+    - git branch
+    - git checkout
+    - git stash (to save temporarily our changes in a kind of heap)
+    - git stash pop (to clear the heap)
+
+- Which conflicts appeared.  
+We expected three conflicts as we code separately in three different tasks. However we got just two, because we had troubles while working in the second activity of the challenge by working on the principal branch, so there was no conflicts.  
+Next, we will present the conflicts that we had:
+
+![Parallel Commit Race conflict 1](images/challenge2Conflict1.webp)
+
+![Parallel Commit Race conflict 2](images/challenge2Conflict3.webp)
+
+Both conflicts were caused because we tried to `merge` with different versions of the code. This means that we tried to update the code having as a base an old version, cause a team mate had already made modifications that we didn't update in our local repository.
+
+- How the conflicts were resolved.  
+The first conflict was resolved by deleting an unnecessary part of the code, in order to join correctly both of the functions requested.
+
+There was no needed to resolve a second conflict as we worked directly on the challenge 2 branch, so it didn't existed any incoherence.
+
+For the third collision it was needed to add a method and reorganize the main method to generalize the information.  
+![Parallel Commit Race conflict 2](images/challenge2Conflict3Solved.webp)
 
 ### Challenge 3 — The Mysterious Echo
 
@@ -141,10 +169,14 @@ Briefly explain:
 Briefly explain:
 
 - What was implemented.
-- How the work was divided.
-- Which Git operations were used.
-- Which conflicts appeared.
-- How the conflicts were resolved.
+We implemented a 
+
+- How the work was divided.  
+- Which Git operations were used.  
+- Which conflicts appeared.  
+  ![The Treasure of Duplicate Keys evidence](images/challenge3Conflict.png)
+- How the conflicts were resolved.  
+- ![The Treasure of Duplicate Keys evidence](images/challenge3ConflictSolve.webp)
 
 
 ### Challenge 4 — The Treasure of Duplicate Keys
@@ -161,7 +193,7 @@ Briefly explain:
 - How the work was divided.
 - Which Git operations were used.
 - Which conflicts appeared.
-- How the conflicts were resolved.
+- How the conflicts were resolved.  
 
 
 ### Challenge 5 — Battle of Sets
