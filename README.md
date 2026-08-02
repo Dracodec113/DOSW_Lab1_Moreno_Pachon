@@ -1,7 +1,10 @@
 # DOSW_Lab1_Moreno_Pachon
 
-    >> DOSW Lab 01: Git, GitHub and functional programming
-    >> Team members: Jeronimo Moreno Herrera and Derly Valeria Pachón Pinzón
+| Name | Institutional Email | GitHub Username |
+|---|---|---|
+| Student 1 | Jeronimo Moreno Herrera | Dracodec113 |
+| Student 2 | Derly Valeria Pachón Pinzón | itsValePp |
+
 
 
 ## Part 1 — Repository Setup and Preparation
@@ -10,8 +13,10 @@
 
 We created our GitHub accounts. Next you will find the emails linked with our profiles:
 
-    - jeronimo.moreno-h@mail.escuelaing.edu.co
-    - dv.pachonpinzon@gmail.com
+| Name | GitHub account email |
+|---|---|
+| Jeronimo Moreno Herrera | Dracodec113 |
+| Derly Valeria Pachón Pinzón | itsValePp |
 
 ### 2. Repository Creation
 
@@ -61,7 +66,7 @@ Each of us clone the repository in our machines
 
 ### 7. Create Individual Feature Branches
 
-Above we show how each of us  created our own branch
+Above we show how each of us  created our own branches
 
 1. `Jeronimo Moreno:`
    
@@ -74,7 +79,7 @@ Above we show how each of us  created our own branch
 
 ### 8. Initial Project Structure
 
-Now we will show the project structure according to the laboratory requirements
+Now we will show the project structure according to the laboratory requirements. We may say that we omit the `Laboratory1` folder because we seek avoiding unnecessary or redundant directories.
 
 ![repository created](images/structure.webp)
 
@@ -110,8 +115,6 @@ We split the work in equal halves. While Derly worked on the streams operations,
   
 - Which conflicts appeared.  
 In this exercise we didn't have conflicts.
-
-
 
 ### Challenge 2 — Parallel Commit Race
 
@@ -151,10 +154,8 @@ Next, we will present the conflicts that we had:
 Both conflicts were caused because we tried to `merge` with different versions of the code. This means that we tried to update the code having as a base an old version, cause a team mate had already made modifications that we didn't update in our local repository.
 
 - How the conflicts were resolved.  
-The first conflict was resolved by deleting an unnecessary part of the code, in order to join correctly both of the functions requested.
-
-There was no needed to resolve a second conflict as we worked directly on the challenge 2 branch, so it didn't existed any incoherence.
-
+The first conflict was resolved by deleting an unnecessary part of the code, in order to join correctly both of the functions requested.  
+There was no needed to resolve a second conflict as we worked directly on the challenge 2 branch, so it didn't existed any incoherence.  
 For the third collision it was needed to add a method and reorganize the main method to generalize the information.  
 ![Parallel Commit Race conflict 2](images/challenge2Conflict3Solved.webp)
 
