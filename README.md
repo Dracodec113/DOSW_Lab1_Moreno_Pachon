@@ -140,6 +140,7 @@ Like both of us wanted to learn how to solve the conflicts, Jeronimo solved the 
     - git merge
     - git branch
     - git checkout
+    - git pull
     - git stash (to save temporarily our changes in a kind of heap)
     - git stash pop (to clear the heap)
 
@@ -169,66 +170,135 @@ For the third collision it was needed to add a method and reorganize the main me
 
 Briefly explain:
 
-- What was implemented.
-We implemented a 
+- What was implemented.  
+We implemented a class named `Challenge3` wich contains the four next methods:  
+  *  `main`: principal method that create an instance of the class and make the call to the methods that solve the problem.
+  *  `reverseText`: method that uses a *StringBuffer* to reverse a given text.
+  *  `repeatString`: method that uses a *StringBuilder* to repeat a given text $n$ needed times.
+  *  `repeatReverseString`: method that initially repeats a string $n$ times separating with a blank space. Then it reverse the whole string.
 
 - How the work was divided.  
+While Jeronimo worked with the repetition problem using a StringBuilder, Derly solve the reverse requirement using a StringBuffer. Later, we make pair-programming in order to solve the conflict.
+
 - Which Git operations were used.  
+    - git add .
+    - git push -u <branch name>
+    - git merge
+    - git branch
+    - git checkout
+    - git pull
+
 - Which conflicts appeared.  
-  ![The Treasure of Duplicate Keys evidence](images/challenge3Conflict.png)
+Like we worked in different tasks and created different functions, when we tried to merge our particular challenge branches with the principal challenge branch it was produced a conflict.  
+![The Treasure of Duplicate Keys conflict](images/challenge3Conflict.png)
+
 - How the conflicts were resolved.  
-- ![The Treasure of Duplicate Keys evidence](images/challenge3ConflictSolve.webp)
+We solved the conflict by joining the methods that each one developed, unifying the main method and creating a new method that integrate the separated methods to give a consolidated answer, as the evidence shows.  
+![The Treasure of Duplicate Keys conflict solution](images/challenge3ConflictSolve.webp)
 
 
 ### Challenge 4 — The Treasure of Duplicate Keys
 
 #### Evidence
 
-![The Treasure of Duplicate Keys evidence](images/challenge4.png)
+![The Treasure of Duplicate Keys evidence](images/challenge4.webp)
 
 #### Description
 
 Briefly explain:
 
-- What was implemented.
-- How the work was divided.
-- Which Git operations were used.
-- Which conflicts appeared.
-- How the conflicts were resolved.  
+- What was implemented.  
+We implemented a class named `Challenge4` in which we made a mixed use of the properties of a *HashMap* and of a *Hashtable*, trough the use of streams and lambda expressions. This in order to create a *String* that contains the information of the gems in the mandatory order and prioritizing the *Hashtable* values.  
+In summary, the objective was to generate a final String with the information in the corresponding format from using a concatenated stream formed by the streams of a Hashtable and a HashMap. We placed first the Hashtable information through the concatenation, in order to prioritize it values.
 
+- How the work was divided.  
+While Jeronimo creates map one using a HashMap, Derly created map two using a Hashtable. Then both of us contribute to the construction of the conflict solution and the requirements fulfillment.
+
+- Which Git operations were used.  
+    - git add .
+    - git push -u <branch name>
+    - git merge
+    - git branch
+    - git checkout
+    - git pull
+    - git stash (to save temporarily our changes in a kind of heap)
+
+- Which conflicts appeared.  
+We had one conflict when we tried to merge our individual challenge branches with the main challenge branches, because each had different code in our local repositories.  
+![The Treasure of Duplicate Keys conflict](images/challenge4Conflict.webp)
+
+- How the conflicts were resolved.  
+To solve the conflict we created a new method that constructed a String with the information from the Hashtable and the HasMap (through the methods previously developed before the conflict). To achieve our goal we used streams and used the collector `joining` to add a jump line next of each element.  
+![The Treasure of Duplicate Keys conflict solution](images/challenge4ConflictSolve.webp)
 
 ### Challenge 5 — Battle of Sets
 
 #### Evidence
 
-![Battle of Sets evidence](images/challenge5.png)
+![Battle of Sets evidence](images/challenge5.webp)
 
 #### Description
 
 Briefly explain:
 
-- What was implemented.
-- How the work was divided.
-- Which Git operations were used.
-- Which conflicts appeared.
-- How the conflicts were resolved.
+- What was implemented.  
+We implemented a class named `Challenge5` that creates a set starting from a a HashSet and a TreeSet. We:
+   - Remove duplicates through the set properties
+   - Avoid the corresponding multiples using `.filter(n -> ...)`
+   - Print the final values using a lambda expression like `.forEach()` 
+Is important to identify that we used different methods to manipulate each type of set and one method to combine the sets in one and unify the answer.
 
+- How the work was divided.  
+While Jeronimo worked with the HashSet and filter the multiples of 3, Derly worked with a TreeSet and filter the multiples of 5. We worked together to solve the conflict.
+
+- Which Git operations were used.  
+    - git add .
+    - git push -u <branch name>
+    - git merge
+    - git branch
+    - git checkout
+    - git pull
+
+- Which conflicts appeared.  
+There was a conflict when we tried to merge both individual branches into the main challenge branch, because each of us had different content in our java files.
+
+- How the conflicts were resolved.  
+We solved the conflict by adding a new method that relate the particular methods that each of us developed and we delete some redundant information in the main method to consolidate the solution.
+![Battle of Sets conflict solution](images/challenge5ConflictSolve.webp)
 
 ### Challenge 6 — The Decision Machine
 
 #### Evidence
 
-![The Decision Machine evidence](images/challenge6.png)
+![The Decision Machine evidence](images/challenge6.webp)
 
 #### Description
 
 Briefly explain:
 
-- What was implemented.
-- How the work was divided.
-- Which Git operations were used.
-- Which conflicts appeared.
-- How the conflicts were resolved.
+- What was implemented.  
+We implemented a class named `Challenge6` in which we have the next methods:
+   - `main`: principal method that creates a instance of the class, create the list of possible commands and print the solution using lambda expressions (.forEach())
+   - `executedCommand`: method that return a Map where the keys are Strings and the the values are Runnable. We created the map using streams, .toMap() collector and a switch to decide which message was going to be added according to the command in the key.
+
+- How the work was divided.  
+While Jeronimo created the map with the student a commands ("GREET", "DANCE", "SING", "FAREWELL"), Derly worked creating the map with the student b commands ("JOKE", "SHOUT", "WHISPER", "ANALYZE"). At the end, we worked together to solve the conflict by unifying both command sets.
+
+- Which Git operations were used.  
+    - git add .
+    - git push -u <branch name>
+    - git merge
+    - git branch
+    - git checkout
+    - git pull
+
+- Which conflicts appeared.  
+When we tried to merge the challenge secondary branches with the main challenge branch we had a conflict caused by different versions. This because each of us had a different group of commands and a particular coding style.  
+![The Decision Machine conflict](images/challenge6Conflict.webp)
+
+- How the conflicts were resolved.  
+We solved the conflict by unifying the groups of commands with its corresponding responses and by defining one style and structure for the solution strategy.  
+![The Decision Machine conflict solution](images/challenge6ConflictSolve.webp)
 
 
 ## Part 3 — Conceptual Questionnaire
@@ -285,3 +355,7 @@ Briefly explain:
 13. Why should new functionality be developed in feature/* branches instead of directly in main?
 
    Because while working with multiple team members we can run into repeated conflicts. Having multiple feature branches allows cooperative work with multiple people and easier conflict resolution. Apart from that, the `main` branch usually represents the stable version of our project, thus having untested code on this branch is a bad practice.
+
+> **Note:**
+> We finally would like to add a bigger piece of the repository historical  
+> ![Repository History](images/repoHistory.webp)
