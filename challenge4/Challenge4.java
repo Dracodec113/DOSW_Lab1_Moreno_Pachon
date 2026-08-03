@@ -11,7 +11,13 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Challenge4{
-    //SELF REMINDER:Entry is the key-value pair in the map. The key is the name of the treasure, and the value is the amount of that treasure.
+    //Remember:Entry is the key-value pair in the map. The key is the name of the treasure, and the value is the amount of that treasure.
+    /**
+     * Building a HashMap and a Hashtable of gems from lists
+     * of key-value pairs, then merges and prints their combined, sorted contents.
+     *
+     * @param args command-line arguments 
+     */
     public static void main(String[] args) {
         Challenge4 c4 = new Challenge4();
         List<Map.Entry<String, Integer>> pairs1 = List.of(
@@ -32,6 +38,14 @@ public class Challenge4{
         System.out.println(c4.writeAnswer(treasureHashMap, treasureHashTable));
     }
 
+    /**
+     * Builds a HashMap of treasures from a list of key-value pairs, keeping
+     * only the first occurrence of each key.
+     *
+     * @param pairs the list of treasure name-amount pairs 
+     * @return a HashMap containing each treasure name mapped to its first
+     *         encountered amount
+     */
     public HashMap<String, Integer> hashMapTreasure(List<Map.Entry<String, Integer>> pairs) {
         HashMap<String, Integer> map = new HashMap<>();
 
@@ -47,6 +61,14 @@ public class Challenge4{
         return map;
     }
 
+    /**
+     * Builds a Hashtable of treasures by flattening a list of single-entry
+     * maps into a single table, keeping the first occurrence of each key.
+     *
+     * @param info the list of maps, each containing one treasure name-amount pair
+     * @return a Hashtable containing each treasure name mapped to its first
+     *         encountered amount
+     */
     private Hashtable<String, Integer> hashTableTreasure(List<Map<String, Integer>> info){
         Hashtable<String, Integer> table = info.stream()
             .flatMap(m -> m.entrySet().stream())
@@ -59,6 +81,16 @@ public class Challenge4{
         return table;
     }
 
+    /**
+     * Merges the entries of a HashMap and a Hashtable of treasures, keeping
+     * the first occurrence of each key, and builds a alphabetically
+     * sorted string.
+     *
+     * @param treasureHashMap the HashMap of treasure names and amounts
+     * @param treasureHashTable the Hashtable of treasure names and amounts
+     * @return a formatted string listing each treasure key (uppercase) and its
+     *         value, sorted alphabetically by key
+     */
     private String writeAnswer(HashMap<String, Integer> treasureHashMap, Hashtable<String, Integer> treasureHashTable){
 
         HashMap<String, Integer> data = Stream.concat(treasureHashTable.entrySet().stream(), treasureHashMap.entrySet().stream())

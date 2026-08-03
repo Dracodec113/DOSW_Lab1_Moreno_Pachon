@@ -7,6 +7,12 @@ import java.util.stream.Collectors;
  */
 
 public class Challenge6{
+    /**
+     * Builds a map of commands to their Runnable responses and executes
+     * each one, printing the command name followed by its response.
+     *
+     * @param args command-line arguments
+     */
     public static void main(String args[]){
         Challenge6 c6 = new Challenge6();
         List<String> commands = List.of("JOKE", "SHOUT", "WHISPER", "ANALYZE", "GREET", "DANCE", "SING", "FAREWELL");
@@ -16,6 +22,13 @@ public class Challenge6{
         n.getValue().run();});
     }
     
+    /**
+     * Builds a map associating each command with a Runnable that prints the
+     * corresponding response.
+     *
+     * @param commands the list of command strings
+     * @return a map associating each command with its Runnable response
+     */
     private Map<String, Runnable> executeCommand(List<String> commands){
         Map<String, Runnable> answers = commands.stream()
         .collect(Collectors.toMap(command -> command, command -> (Runnable) () -> {switch(command){

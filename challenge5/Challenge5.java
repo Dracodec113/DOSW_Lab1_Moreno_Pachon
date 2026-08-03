@@ -9,6 +9,12 @@ import java.util.stream.Stream;
  * Challenge 5
  */
 public class Challenge5 {
+    /**
+     * Generates random numbers and combining the filtered
+     * results into a single sorted set.
+     *
+     * @param args command-line arguments
+     */
     public static void main(String[] args) {
         Challenge5 c5 = new Challenge5();
 
@@ -26,12 +32,26 @@ public class Challenge5 {
         battle.forEach(n -> System.out.println("Number in the arena: " + n));
     }
 
+    /**
+     * Filters the given set of numbers, keeping only those that are not
+     * multiples of 3.
+     *
+     * @param numbers the set of numbers to filter
+     * @return a HashSet containing only the numbers not divisible by 3
+     */
     public HashSet<Integer> hashSetNumbers(HashSet<Integer> numbers) {
         return numbers.stream()
                     .filter(n -> n % 3 != 0)
                     .collect(Collectors.toCollection(HashSet::new));
     }
 
+    /**
+     * Generates a set of random numbers.
+     *
+     * @param quantity the number of random values to generate
+     * @param limit the upper bound (exclusive) for each generated random number
+     * @return a HashSet containing the generated random numbers
+     */
     public HashSet<Integer> numberGenerator(int quantity, int limit) {
         Random random = new Random();
         HashSet<Integer> set = new HashSet<>();
@@ -43,6 +63,14 @@ public class Challenge5 {
         return set;
     }
 
+    /**
+     * Filters the given list of numbers, keeping only those that are not
+     * multiples of 5, and collects them into a sorted set.
+     *
+     * @param numbers the list of numbers to filter
+     * @return a TreeSet containing only the numbers not divisible by 5, sorted
+     *         in natural order
+     */
     private TreeSet<Integer> treeSetBattle(List<Integer> numbers){
         TreeSet<Integer> answer = numbers.stream()
         .filter(n -> n % 5 != 0)

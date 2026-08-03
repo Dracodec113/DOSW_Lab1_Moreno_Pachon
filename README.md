@@ -305,6 +305,21 @@ We solved the conflict by unifying the groups of commands with its corresponding
 
 1. Team agreements: Add the agreements you defined in the Onboarding section here.
 
+   - What times will you meet?  
+      We would like to meet three times during the week with the next objectives:  
+      1. Stablish working dinamics, defining roles (lane 1, lane 2, student a, student b), creating and structuring the repository and working in the first two challenges.
+      2. Solving conflicts, developing the next two challenges and organizing the README file.
+      3. Solving the last two challenges, solving the questionnaire and finishing all the documentation tasks.
+  
+   - What will your communication channels be: Teams, WhatsApp, Slack...?  
+      We will communicate through WhatsApp and Discord.
+
+   - How often will you meet?  
+      We will work on monday, saturday and sunday.
+
+   - If a conflict were to arise, how could you resolve it?  
+      We could try to solve it by our one, analyzing both codes and creating a strategy to merge them properly. If we don´t understand something about the others development, we can ask our mate through a message in any of the communication channels predefined.
+
 2. What is the difference between git merge and git rebase?
 
    A merge basically "combines" the histories of both branches through commits, while a rebase rewrites the history of the other branch replaying the commits on top of the branch.
@@ -334,7 +349,7 @@ We solved the conflict by unifying the groups of commands with its corresponding
 
    It allows us to make multiple moves at once. Instead of needing to create an empty map and populate it through a loop, we can directly use a stream to create our map. This also synergises well with other stream methods such as filter.
 
-9. When using stream().map() on a list of objects, what type of operation is being performed?
+9.  When using stream().map() on a list of objects, what type of operation is being performed?
 
    It applies a function to each element of the stream and produces a new stream of transformed elements, without modifying the original list.
 
